@@ -29,101 +29,87 @@
     </div>
 
 
-    <b-row>
-      <b-col cols="12" md="4" class="listing">
+    <b-row v-if="posts && posts.length">
+      <b-col cols="12" md="4" class="listing" v-for="post of posts">
           <div class="listing-wrapper">
-          <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-          <p class="line-1">Lingonberry Double IPA</p>
-          <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-          <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-          <p class="info">11/03/2018</p>
+          <b-img id="brewdog-img" class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
+          <p class="line-1">{{post.name}}</p>
+          <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+          <p class="info">{{post.description}}</p>
         </div>
       </b-col>
-      <b-col cols="12" md="4" class="listing">
+      <b-col cols="12" md="4" class="listing" v-for="post of posts">
           <div class="listing-wrapper">
           <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-          <p class="line-1">Lingonberry Double IPA</p>
-          <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-          <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-          <p class="info">11/03/2018</p>
+          <p class="line-1">{{post.name}}</p>
+          <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+          <p class="info">{{post.description}}</p>
         </div>
       </b-col>
-      <b-col cols="12" md="4" class="listing">
+      <b-col cols="12" md="4" class="listing" v-for="post of posts">
           <div class="listing-wrapper">
           <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-          <p class="line-1">Lingonberry Double IPA</p>
-          <p class="time">First Brewed: 06/2013<<span class="time" style="float: right;">ABV: 8.2%</span>/p>
-          <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-          <p class="info">11/03/2018</p>
+          <p class="line-1">{{post.name}}</p>
+          <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+          <p class="info">{{post.description}}</p>
         </div>
       </b-col>
     </b-row>
 
     <b-row>
-        <b-col cols="12" md="4" class="listing">
+        <b-col cols="12" md="4" class="listing" v-for="post of posts">
             <div class="listing-wrapper">
             <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">Lingonberry Double IPA</p>
-            <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-            <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-            <p class="info">11/03/2018</p>
+            <p class="line-1">{{post.name}}</p>
+            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+            <p class="info">{{post.description}}</p>
           </div>
         </b-col>
-        <b-col cols="12" md="4" class="listing">
+        <b-col cols="12" md="4" class="listing" v-for="post of posts">
             <div class="listing-wrapper">
             <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">Lingonberry Double IPA</p>
-            <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-            <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-            <p class="info">11/03/2018</p>
+            <p class="line-1">{{post.name}}</p>
+            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+            <p class="info">{{post.description}}</p>
           </div>
         </b-col>
-        <b-col cols="12" md="4" class="listing">
+        <b-col cols="12" md="4" class="listing" v-for="post of posts">
             <div class="listing-wrapper">
             <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">Lingonberry Double IPA</p>
-            <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-            <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-            <p class="info">11/03/2018</p>
+            <p class="line-1">{{post.name}}</p>
+            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+            <p class="info">{{post.description}}</p>
           </div>
         </b-col>
     </b-row>
 
     <b-row>
-        <b-col cols="12" md="4" class="listing">
+        <b-col cols="12" md="4" class="listing" v-for="post of posts">
             <div class="listing-wrapper">
             <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">Lingonberry Double IPA</p>
-            <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-            <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-            <p class="info">11/03/2018</p>
+            <p class="line-1">{{post.name}}</p>
+            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+            <p class="info">{{post.description}}</p>
           </div>
         </b-col>
-        <b-col cols="12" md="4" class="listing">
+        <b-col cols="12" md="4" class="listing" v-for="post of posts">
             <div class="listing-wrapper">
             <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">Lingonberry Double IPA</p>
-            <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-            <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-            <p class="info">11/03/2018</p>
+            <p class="line-1">{{post.name}}</p>
+            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+            <p class="info">{{post.description}}</p>
           </div>
         </b-col>
-        <b-col cols="12" md="4" class="listing">
+        <b-col cols="12" md="4" class="listing" v-for="post of posts">
             <div class="listing-wrapper">
             <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">Lingonberry Double IPA</p>
-            <p class="time">First Brewed: 06/2013<span class="time" style="float: right;">ABV: 8.2%</span></p>
-            <p class="info">We sent this beer to Norway where it was known as 'Hello, my name is Censored’. You can make up your own mind as to why. This brew was a red berry explosion, with a reisnous bitter edge layered with dry berry tartness.</p>
-            <p class="info">11/03/2018</p>
+            <p class="line-1">{{post.name}}</p>
+            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+            <p class="info">{{post.description}}</p>
           </div>
         </b-col>
     </b-row>
-
-
-
-      
-
-  </b-container>
+</b-container>
 
   </div>
 
@@ -132,6 +118,46 @@
 </template>
 
 <script>
+    import axios from 'axios';
+    
+    export default {
+      transition: 'page',
+      data() {
+        return {
+          text1: '',
+          posts: [],
+          errors: []
+        }
+      },
+      // Fetches posts when the component is created.
+      created() {
+        axios.get(`https://api.punkapi.com/v2/beers/random`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.posts = response.data
+          console.log(response.data[0])
+          var data = response.data[0]
+          console.log(data)
+          document.getElementById('brewdog-img').src = data['image_url']
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
+        
+    
+        // async / await version (created() becomes async created())
+        //
+        // try {
+        //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+        //   this.posts = response.data
+        // } catch (e) {
+        //   this.errors.push(e)
+        // }
+      }
+    }
+    </script>
+
+<!-- <script>
 export default {
   transition: 'page'
 }
@@ -145,4 +171,4 @@ export default {
     }
   }
 }
-    </script>
+    </script> -->
