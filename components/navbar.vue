@@ -10,7 +10,8 @@
 
         <b-navbar-nav>
           <b-nav-item href="#" to="/listings">Beers</b-nav-item>
-          <b-nav-item href="#" to="/about">About</b-nav-item>
+          <b-nav-item href="#" to="/about">API</b-nav-item>
+          <b-nav-item href="#" to="/isotope">Isotope</b-nav-item>
         </b-navbar-nav>
 
 

@@ -9,6 +9,8 @@
 	
 	padding: 10px;
 	padding-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .intro {
@@ -137,6 +139,23 @@
 	color: white;
 }
 
+.enter {
+	position: absolute;
+	left: 30%;
+	top: 10%;
+	font-family: Helvetica;
+	letter-spacing: -4px;
+	font-weight: bold;
+	font-size: 120px;
+	color: white;
+}
+
+.enter:hover {
+	color: #cfcfd1;
+	text-decoration: none;
+}
+
+
 .header img {
 	z-index: -1;
 	position: absolute;
@@ -203,7 +222,6 @@
   50% { transform: scale(1.5) }
   100% { transform: scale(0) }
 }
-
 
 
 
