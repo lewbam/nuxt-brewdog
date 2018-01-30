@@ -32,7 +32,7 @@
     <b-row v-if="posts && posts.length">
       <b-col cols="12" md="4" class="listing" v-for="post of posts">
           <div class="listing-wrapper">
-          <b-img id="brewdog-img" class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
+          <b-img id='brewdog-img' class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
           <p class="line-1">{{post.name}}</p>
           <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
           <p class="info">{{post.description}}</p>
@@ -55,60 +55,7 @@
         </div>
       </b-col>
     </b-row>
-
-    <b-row>
-        <b-col cols="12" md="4" class="listing" v-for="post of posts">
-            <div class="listing-wrapper">
-            <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">{{post.name}}</p>
-            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
-            <p class="info">{{post.description}}</p>
-          </div>
-        </b-col>
-        <b-col cols="12" md="4" class="listing" v-for="post of posts">
-            <div class="listing-wrapper">
-            <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">{{post.name}}</p>
-            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
-            <p class="info">{{post.description}}</p>
-          </div>
-        </b-col>
-        <b-col cols="12" md="4" class="listing" v-for="post of posts">
-            <div class="listing-wrapper">
-            <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">{{post.name}}</p>
-            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
-            <p class="info">{{post.description}}</p>
-          </div>
-        </b-col>
-    </b-row>
-
-    <b-row>
-        <b-col cols="12" md="4" class="listing" v-for="post of posts">
-            <div class="listing-wrapper">
-            <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">{{post.name}}</p>
-            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
-            <p class="info">{{post.description}}</p>
-          </div>
-        </b-col>
-        <b-col cols="12" md="4" class="listing" v-for="post of posts">
-            <div class="listing-wrapper">
-            <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">{{post.name}}</p>
-            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
-            <p class="info">{{post.description}}</p>
-          </div>
-        </b-col>
-        <b-col cols="12" md="4" class="listing" v-for="post of posts">
-            <div class="listing-wrapper">
-            <b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
-            <p class="line-1">{{post.name}}</p>
-            <p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
-            <p class="info">{{post.description}}</p>
-          </div>
-        </b-col>
-    </b-row>
+   
 </b-container>
 
   </div>
@@ -131,17 +78,20 @@
       },
       // Fetches posts when the component is created.
       created() {
-        axios.get(`https://api.punkapi.com/v2/beers/random`)
+        axios.get(`https://api.punkapi.com/v2/beers?page=2&per_page=80`)
         .then(response => {
           // JSON responses are automatically parsed.
           this.posts = response.data
           console.log(response.data[0])
           var data = response.data[0]
           console.log(data)
+          console.log(data['image_url'])
           document.getElementById('brewdog-img').src = data['image_url']
+          
         })
         .catch(e => {
           this.errors.push(e)
+
         })
         
     

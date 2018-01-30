@@ -1,10 +1,31 @@
 <template>
-		<ul v-if="posts && posts.length">
-			<li v-for="post of posts">
-				<p><strong>{{post.name}}</strong></p>
-				<p>{{post.body}}</p>
-			</li>
-		</ul>
+
+		<b-row v-if="posts && posts.length">
+				<b-col cols="12" md="4" class="listing" v-for="post of posts">
+						<div class="listing-wrapper">
+						<b-img id='brewdog-img' class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
+						<p class="line-1">{{post.name}}</p>
+						<p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+						<p class="info">{{post.description}}</p>
+					</div>
+				</b-col>
+				<b-col cols="12" md="4" class="listing" v-for="post of posts">
+						<div class="listing-wrapper">
+						<b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
+						<p class="line-1">{{post.name}}</p>
+						<p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+						<p class="info">{{post.description}}</p>
+					</div>
+				</b-col>
+				<b-col cols="12" md="4" class="listing" v-for="post of posts">
+						<div class="listing-wrapper">
+						<b-img class="beer-image" thumbnail fluid rounded src="https://images.punkapi.com/v2/19.png" v-b-modal.modal1 alt="Thumbnail" />
+						<p class="line-1">{{post.name}}</p>
+						<p class="time">First Brewed: {{post.first_brewed}}<span class="time" style="float: right;">ABV: {{post.abv}}%</span></p>
+						<p class="info">{{post.description}}</p>
+					</div>
+				</b-col>
+			</b-row>
 	</template>
 	
 	<script>
