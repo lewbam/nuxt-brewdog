@@ -4,7 +4,7 @@
     <div class="header">
       <img src="https://www.brewdog.com/images/cms/blog/1510140996HMNIRelease_1.LEAD.jpg" class="header-img">
       <nuxt-link class="enter" to="/listings">
-        <a>Enter Site</a>
+        <button>Enter Site</button>
       </nuxt-link>
     </div>
     <!-- <b-row>
