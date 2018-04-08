@@ -7,6 +7,7 @@
 
 <script>
   import Navbar from '../components/Navbar'
+  // require('material-design-lite')
 
   export default {
     components: {

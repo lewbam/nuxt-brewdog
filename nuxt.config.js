@@ -32,19 +32,14 @@ module.exports = {
     '@/assets/css/styles.css'
   ],
 
-  script: [
-    { src: 'assets/js/script.js' }
-  ],
-
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/vue-isotope', ssr: false}],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [,
+  modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
   ],
@@ -53,7 +48,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-isotope'],
     /*
     ** You can extend webpack config here
     */
