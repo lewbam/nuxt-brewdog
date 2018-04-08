@@ -1,6 +1,6 @@
 # Nuxt
 
-> My finest Nuxt.js project
+> A project built on Nuxt.js, Using Punk API, Bootstrap Vue and Webkit voice recognition. This is one of my final year portfolio pieces.
 
 ## Build Setup
 
