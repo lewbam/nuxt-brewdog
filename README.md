@@ -1,6 +1,6 @@
 # Nuxt
 
-> A project built on Nuxt.js, Using Punk API, Bootstrap Vue and Webkit voice recognition. This is one of my final year portfolio pieces.
+> A project built on Nuxt.js, Using Punk API, Bootstrap Vue and Webkit voice recognition. This is one of my final year portfolio pieces. Hosted at https://brewlog-1.firebaseapp.com/
 
 ## Build Setup
 
